@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #main {
+      min-height: 100vh;
+      width: 100%;
+      background-color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      
+    }
+
+    /* Navbar */
+    #nav {
+      height: 80px;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 30px;
+      padding: 0 30px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    #nav h4 {
+      font-size: 18px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    #nav h4:hover {
+      color: #ff3b3f;
+    }
+
+    /* Center Section */
+    #center {
+      flex: 1;
+      width: 100%;
+      background-color: white;
+      padding: 40px 50px;
+    }
+
+    #center h1 {
+      font-size: 60px;
+      font-weight: 600;
+      line-height: 70px;
+      color: #222;
+    }
+
+    #center-in {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    #center-in p {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #444;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .right {
+      width: 250px;
+      min-width: 200px;
+    }
+
+    .elm {
+      padding: 15px 0;
+      border-top: 2px solid black;
+    }
+
+    .elm a {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .elm a:hover {
+      color: #ff3b3f;
+    }
+
+    /* Bottom Banner */
+    #bottom {
+      height: 550px;
+      width: 100%;
+      background: url("header.jpg") no-repeat center center/cover;
+      border-top: 4px solid #ff3b3f;
+      object-fit: cover;
+     
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #center h1 {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      #center-in {
+        flex-direction: column;
+      }
+
+      .right {
+        width: 100%;
+      }
+
+      #bottom {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #nav {
+        justify-content: center;
+        gap: 15px;
+        font-size: 14px;
+      }
+
+      #center {
+        padding: 20px;
+      }
+
+      #center h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      #center-in p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .elm a {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <!-- Navbar -->
+    <div id="nav">
+      <h4>About</h4>
+      <h4>News</h4>
+      <h4>Car</h4>
+      <h4>Policy</h4>
+    </div>
+
+    <!-- Center -->
+    <div id="center">
+      <h1>
+        Lightly padded,<br>
+        quality jacket in <br>
+        recycled polyester
+      </h1>
+      <div id="center-in">
+        <p>
+          Exclusive brands aspire for the label haute couture,
+          but the term is technically limited to members
+          of the Chambre Syndicale de la Haute Couture.
+        </p>
+        <div class="right">
+          <div class="elm">
+            <a href="#">Add to cart</a>
+          </div>
+          <div class="elm">
+            <a href="#">Product Details</a>
+          </div>
+          <div class="elm">
+            <a href="#">Shipping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Banner -->
+    <div id="bottom"></div>
+  </div>
+</body>
+</html>
